@@ -39,11 +39,11 @@ const router = createBrowserRouter([
           },
           {
             path: "add-new",
-            element: <AddNewRecipe path="add-new"/>,
+            element: <AddNewRecipe path="add-new" />,
           },
           {
             path: "edit/:id",
-            element: <AddNewRecipe path="edit"/>,
+            element: <AddNewRecipe path="edit" />,
           },
           {
             path: "category/:slug",
@@ -55,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+        loader: () => {
+          alert(`Email: hridoy@wpdeveloper.com, password: hridoy`);
+          return null;
+        },
       },
     ],
   },

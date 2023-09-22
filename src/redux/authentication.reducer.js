@@ -17,7 +17,7 @@ export const authenticationSlice = createSlice({
     },
     logout: (state) => {
       state.isAuthenticated = false;
-      localStorage.setItem("recipes_authentication", false);
+      localStorage.removeItem("recipes_authentication", false);
     },
   },
 });

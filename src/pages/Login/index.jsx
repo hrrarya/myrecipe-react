@@ -7,10 +7,6 @@ import { useEffect } from "react";
 const Login = () => {
   const authentication = useSelector((state) => state.authentication);
 
-  // useEffect(() => {
-  //   alert("Demo Email: hridoy@wpdeveloper.com, password: hridoy");
-  // }, []);
-
   if (authentication.isAuthenticated) {
     return <Navigate to="/" replace={true} />;
   }
