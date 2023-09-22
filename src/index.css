@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Indie Flower", cursive;
+}
+
+.logo {
+  @apply font-bold text-3xl;
+}
+.navbar a {
+  @apply mr-2 text-lg;
+}
+.navbar a.active {
+  @apply text-blue-500 font-semibold pb-1 border-b border-b-blue-200;
+}
+
+.home-hero-section {
+  position: relative;
+  background-image: url(/images/food-drink.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @apply h-80 flex justify-center items-center flex-col text-white text-center;
+}
+.home-hero-section h2 {
+  @apply text-4xl mb-2;
+}
+.home-hero-section-overlay,
+.recipe-single-category-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.recipe-single-category-overlay {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.home-hero-section-content {
+  z-index: 1;
+}
+
+.recipes-page {
+  height: calc(100vh-20px);
+}
+.recipe-sidebar-menu {
+  @apply mr-4;
+}
+.recipe-sidebar-menu a {
+  @apply shadow px-3 py-4 font-semibold;
+}
+.recipe-sidebar-menu a.active {
+  @apply bg-teal-200;
+}
+.new-recipe-page .form-group {
+  @apply p-2 flex;
+}
+.new-recipe-page .form-group label {
+  @apply w-40 inline-block;
+}
+.new-recipe-page .form-group input,
+.new-recipe-page .form-group textarea {
+  @apply shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight w-3/4;
+}
