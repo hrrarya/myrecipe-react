@@ -1,6 +1,6 @@
 const LeftSide = () => {
   return (
-    <div className="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+    <div className="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly sm:hidden">
       <div className="my-3 text-4xl font-bold tracking-wider text-center">
         <a href="#">My Recipe</a>
       </div>

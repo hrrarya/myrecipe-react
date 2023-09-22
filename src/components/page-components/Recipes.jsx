@@ -32,7 +32,6 @@ const Recipes = ({ recipes, label }) => {
   };
 
   const _getFilteredRecipes = (recipes) => {
-    console.log(searchParams.get("search") !== "");
     if (searchParams.get("search") && searchParams?.get("search") != "") {
       return recipes.filter((recipe) =>
         recipe.title
@@ -42,7 +41,7 @@ const Recipes = ({ recipes, label }) => {
     }
     return recipes;
   };
-  // _getFilteredRecipes(allRecipes);
+
   if (allRecipes && allRecipes?.length === 0) {
     return (
       <div className="recipes-link">
@@ -77,11 +76,7 @@ const Recipes = ({ recipes, label }) => {
       <p className="text-3xl mb-4 font-semibold">
         Recipes {"" !== label && <span>for {label}</span>}
       </p>
-      <SearchRecipes
-        setAllRecipes={setAllRecipes}
-        recipes={allRecipes}
-        _handleSearch={_handleSearch}
-      />
+      <SearchRecipes _handleSearch={_handleSearch} />
       <div className="recipes-list grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1">
         {_getFilteredRecipes(allRecipes).map((recipe) => {
           return (

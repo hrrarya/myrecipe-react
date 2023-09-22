@@ -15,8 +15,8 @@ const Login = () => {
     return <Navigate to="/" replace={true} />;
   }
   return (
-    <section className="flex items-center flex-col min-h-screen p-4 bg-gray-100 lg:justify-center">
-      <div className="overflow-hidden bg-white rounded-md shadow-lg max grid grid-cols-2 gap-2">
+    <section className="flex sm:block items-center flex-col min-h-screen p-4 bg-gray-100 lg:justify-center">
+      <div className="overflow-hidden bg-white rounded-md shadow-lg max grid grid-cols-2 sm:block gap-2">
         <LeftSide />
         <LoginForm />
       </div>

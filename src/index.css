@@ -10,7 +10,7 @@ body {
   @apply font-bold text-3xl;
 }
 .navbar a {
-  @apply mr-2 text-lg;
+  @apply mr-2 mb-2 text-lg;
 }
 .navbar a.active {
   @apply text-blue-500 font-semibold pb-1 border-b border-b-blue-200;
